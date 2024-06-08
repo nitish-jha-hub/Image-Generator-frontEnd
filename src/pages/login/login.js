@@ -2,6 +2,7 @@ import PointsContext from "../../context/pointsContext";
 import Navbar from "../common/Navbar/navbar";
 import {useState, useContext} from "react";
 import { useNavigate } from "react-router-dom";
+import "./login.css";
 
 const Login = () => {
     const {login} = useContext(PointsContext);
@@ -33,9 +34,9 @@ const Login = () => {
         <div>
             <Navbar page='login'/>
             <div>
-                <input onChange={(e)=>setEmail(e.target.value)}/>
-                <input onChange={(e)=>setPassword(e.target.value)}/>
-                <button onClick={handleClick}>Login</button>
+                <input placeholder="enter your email" onChange={(e)=>setEmail(e.target.value)}/>
+                <input placeholder="enter your password" onChange={(e)=>setPassword(e.target.value)}/>
+                <button className="btnlogin" onClick={handleClick}>Login</button>
             </div>
         </div>
     )

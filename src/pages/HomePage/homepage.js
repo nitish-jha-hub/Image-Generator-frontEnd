@@ -6,7 +6,9 @@ const HomePage = (props) => {
         <div> 
             <Navbar page="home"/>
             <div className="homepage-main-container">
-                Coming soon...
+            website that combines login/signup functionality with an image generator.
+            <br></br>
+            Click on the "Login" button to login or "Signup" to create a new account.
             </div>
         </div>
     )

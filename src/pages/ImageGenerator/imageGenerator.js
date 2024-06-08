@@ -6,6 +6,7 @@ import {useState, useContext} from "react";
 const ImageGenerator = (props) => {
     const cValue = useContext(PointsContext);
     const [searchText, setSearchText] = useState();
+    const [searchTextsend, setSearchTextsend] = useState();
     const [imageSrc, setImgSrc] = useState("");
 
     const func = (e) => {
@@ -40,9 +41,11 @@ const ImageGenerator = (props) => {
             <Navbar page="imageGenerator"/>
             <div className="image-generator-main-container">
                 <div className='image-search'>
-                    <img src={imageSrc} />
+                    <img src={`https://loremflickr.com/320/240/${searchTextsend}`} />
+                    {/* <img src={`https://picsum.photos/200`} /> */}
                     <input onChange={(e)=>{func(e)}}/>
-                    <button onClick={handleClick}>Generate</button>
+                    {/* <button onClick={handleClick}>Generate</button> */}
+                    <button onClick={()=>{setSearchTextsend(searchText)}}>Generate</button>
                 </div>
             </div>
         </div>

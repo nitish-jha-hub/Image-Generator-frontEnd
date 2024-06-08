@@ -2,9 +2,10 @@ import {useContext} from "react";
 import PointsContext from "../../../context/pointsContext";
 import "./navbar.css";
 import {Link} from 'react-router-dom';
-
+import { useNavigate } from "react-router-dom";
 
 const Navbar = (props) => {
+    const navigate = useNavigate();
     const contextValues = useContext(PointsContext);
     const page = props.page;
 
@@ -28,7 +29,7 @@ const Navbar = (props) => {
             </div>
             {contextValues.isLoggedIn?
                 <button onClick={contextValues.logout}>Logout</button>
-                :<button onClick={contextValues.login}>Login</button>
+                :<button onClick={()=>{navigate("/login");}}>Login</button>
             }
         </div>
     )

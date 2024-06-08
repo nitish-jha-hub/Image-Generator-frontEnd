@@ -12,5 +12,33 @@
 
     img{
         width: 300px;
+        border-radius: 11px;
     }
 }
+
+.image-search input{
+    width: 300px;
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+.image-search button{
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.image-search button:hover{
+    background-color: #0056b3;
+}
+
+.image-search button:active{
+    background-color: #004b9a;
+}
+
